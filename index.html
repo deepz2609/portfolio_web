@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepak Say's Hii</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/87f4045376.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/deep.png" class="logo" />
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Cyber Security</p>
+                <h1>
+                    Hi, I'm <span>Deepak Kumar</span> <br />
+                    From Manglore
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!------About Me-------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/profile.jpg" />
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        As a computer science engineering student, I am driven to
+                        understand and innovate within the field of technology. I possess
+                        a strong foundation in programming languages such as C++, Python,
+                        and JavaScript. My coursework has covered topics such as data
+                        structures, algorithms, and software development methodologies. I
+                        also have experience in web development and database management.
+                        My passion for technology extends beyond my education, as I am
+                        constantly seeking to learn and stay current with new advancements
+                        in the field. I am eager to apply my skills in a professional
+                        setting, and I am open to opportunities that will challenge me to
+                        grow as an engineer.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            Skills
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            Experience
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br />Python, C, C++, HTML, CSS</li>
+                            <li>
+                                <span>Tools and Technologies</span><br />Roku, Git, Google
+                                Colab, VSCode,
+                            </li>
+                            <li>
+                                <span>Operating System</span><br />Windows, Ubuntu, Android,
+                                Kali Linux
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>2023 - 2024</span><br />Team Lead to build website
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br />BE- Computer Science (CGPA: 8.5)</li>
+                            <li>
+                                <span>2021</span><br />Pre University - PCMC (Percentage: 93)
+                            </li>
+                            <li><span>2019</span><br />SSLC (Percentage: 91)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------services------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Serivces</h1>
+            <div class="services-list">
+                <!--             <div> 
+                <i class="fa-solid fa-hat-cowboy"></i>
+                <h2> Ethical Hacking</h2>
+                <p>“Security isn't something you buy, it's something you do, 
+                    and it takes talented people to do it right.” </p>
+                <a href="#"> Learn more</a>
+            </div> -->
+
+                <!-- <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2> UI/UX Design</h2>
+                <p>“Design isn't just what it looks like and feels like — design is how it works.” </p>
+                <a href="#"> Learn more</a>
+            </div>  -->
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        “SEO is an investment just like a tree that needs effort, patience
+                        and time to grow before you can see the result.”
+                    </p>
+                    <a href="#"> Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------Portfolio---------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <!-- <div class="work">
+                <img src="Images/3.jpg">
+                <div class="layer">
+                    <h3></h3>
+                    <p> This project is designed to recognize handwritten characters in the Kannada script using advanced image processing techniques and machine learning algorithms. By processing and analyzing input images of handwritten Kannada letters, the system accurately identifies the characters, providing a robust solution for Kannada handwriting recognition.</p>
+                    <a href=""> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div> -->
+
+                <div class="work">
+                    <img src="Images/matsya.jpg" height="382px" width="230px" />
+                    <div class="layer">
+                        <h3>MatsyaMitra</h3>
+                        <p>
+                            A machine learning-based classifier for Indian Ocean fish
+                            species, designed to prevent fraud by accurately identifying and
+                            displaying similar fish.
+                        </p>
+                        <a href="https://MatsyaMitra.live" >
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="Images/url.png" height="382px" width="230px" />
+                    <div class="layer">
+                        <h3>URL Shortner Project</h3>
+                        <p>
+                            A URL shortener project using Node.js and MongoDB creates short,
+                            unique URLs that redirect to original long URLs, enabling
+                            efficient link sharing and tracking.
+                        </p>
+                        <a href="https://github.com/deepz2609/URL-Shortner.git">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/deepz2609" class="btn"> See more</a>
+        </div>
+    </div>
+
+    <!------------------Contact---------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>
+                        <i class="fa-solid fa-paper-plane"></i> geekydeepz09@gmail.com
+                    </p>
+                    <p><i class="fa-solid fa-phone-volume"></i> +91 8618703826</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/mr_white_hat.26"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/deepak-kumar-470486289"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/deepz2609"><i class="fab fa-github"></i></a>
+                    </div>
+                    <a href="Images/resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet" method="post">
+                        <input type="text" name="Name" placeholder="Your Name" required />
+                        <input type="email" name="Email" placeholder="Your Email" required />
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>
+                Copyright © Deepak <i class="fa-solid fa-heart"></i> 2023. All rights
+                are preserved
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const form = document.forms["submit-to-google-sheet"];
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(
+                "https://script.google.com/macros/s/AKfycby0RG-FrYRCL5Xc9OunLfzynCh6orrRuhW6v8KGH_ipzKZDBakPpu29aqXuKSIzWYiL/exec",
+                {
+                    method: "POST",
+                    body: new FormData(form),
+                }
+            )
+                .then((response) => response.text())
+                .then((text) => console.log(text))
+                .catch((error) => console.error("Error!", error.message));
+        });
+    </script>
+</body>
+
+</html>
