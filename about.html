@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepak Say's Hii</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/87f4045376.js" crossorigin="anonymous"></script>
+    <style>
+        #headerr{
+    width: 100%;
+    height: 100px;
+   
+}
+    </style>
+</head>
+
+<body>
+<div id="headerr">
+    <div class="container">
+        <nav>
+            <img src="Images/deep.png" class="logo" />
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/profile.jpg" />
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    As a computer science engineering student, I am driven to
+                    understand and innovate within the field of technology. I possess
+                    a strong foundation in programming languages such as C++, Python,
+                    and JavaScript. My coursework has covered topics such as data
+                    structures, algorithms, and software development methodologies. I
+                    also have experience in web development and database management.
+                    My passion for technology extends beyond my education, as I am
+                    constantly seeking to learn and stay current with new advancements
+                    in the field. I am eager to apply my skills in a professional
+                    setting, and I am open to opportunities that will challenge me to
+                    grow as an engineer.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">
+                        Skills
+                    </p>
+                    <p class="tab-links" onclick="opentab('experience')">
+                        Experience
+                    </p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br />Python, C, C++, HTML, CSS</li>
+                        <li>
+                            <span>Tools and Technologies</span><br />Roku, Git, Google
+                            Colab, VSCode,
+                        </li>
+                        <li>
+                            <span>Operating System</span><br />Windows, Ubuntu, Android,
+                            Kali Linux
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>
+                            <span>2023 - 2024</span><br />Team Lead to build website
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2025</span><br />BE- Computer Science (CGPA: 8.5)</li>
+                        <li>
+                            <span>2021</span><br />Pre University - PCMC (Percentage: 93)
+                        </li>
+                        <li><span>2019</span><br />SSLC (Percentage: 91)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>
+        Copyright © Deepak <i class="fa-solid fa-heart"></i> 2023. All rights
+        are preserved
+    </p>
+</div>
+</div>
+
+<script>
+const form = document.forms["submit-to-google-sheet"];
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(
+        "https://script.google.com/macros/s/AKfycby0RG-FrYRCL5Xc9OunLfzynCh6orrRuhW6v8KGH_ipzKZDBakPpu29aqXuKSIzWYiL/exec",
+        {
+            method: "POST",
+            body: new FormData(form),
+        }
+    )
+        .then((response) => response.text())
+        .then((text) => console.log(text))
+        .catch((error) => console.error("Error!", error.message));
+});
+</script>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemeu.style.right = "0";
+    }
+    function closemenu() {
+        sidemeu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

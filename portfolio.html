@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepak Say's Hii</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/87f4045376.js" crossorigin="anonymous"></script>
+    <style>
+        #headerr{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+   
+}
+    </style>
+</head>
+
+<body>
+<div id="headerr">
+    <div class="container">
+        <nav>
+            <img src="Images/deep.png" class="logo" />
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <!-- <div class="work">
+            <img src="Images/3.jpg">
+            <div class="layer">
+                <h3></h3>
+                <p> This project is designed to recognize handwritten characters in the Kannada script using advanced image processing techniques and machine learning algorithms. By processing and analyzing input images of handwritten Kannada letters, the system accurately identifies the characters, providing a robust solution for Kannada handwriting recognition.</p>
+                <a href=""> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div> -->
+
+            <div class="work">
+                <img src="Images/matsya.jpg" height="382px" width="230px" />
+                <div class="layer">
+                    <h3>MatsyaMitra</h3>
+                    <p>
+                        A machine learning-based classifier for Indian Ocean fish
+                        species, designed to prevent fraud by accurately identifying and
+                        displaying similar fish.
+                    </p>
+                    <a href="https://MatsyaMitra.live" >
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="Images/url.png" height="382px" width="230px" />
+                <div class="layer">
+                    <h3>URL Shortner Project</h3>
+                    <p>
+                        A URL shortener project using Node.js and MongoDB creates short,
+                        unique URLs that redirect to original long URLs, enabling
+                        efficient link sharing and tracking.
+                    </p>
+                    <a href="https://github.com/deepz2609/URL-Shortner.git">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/deepz2609" class="btn"> See more</a>
+    </div>
+</div>
+<div class="copyright">
+    <p>
+        Copyright © Deepak <i class="fa-solid fa-heart"></i> 2023. All rights
+        are preserved
+    </p>
+</div>
+</div>
+
+<script>
+const form = document.forms["submit-to-google-sheet"];
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(
+        "https://script.google.com/macros/s/AKfycby0RG-FrYRCL5Xc9OunLfzynCh6orrRuhW6v8KGH_ipzKZDBakPpu29aqXuKSIzWYiL/exec",
+        {
+            method: "POST",
+            body: new FormData(form),
+        }
+    )
+        .then((response) => response.text())
+        .then((text) => console.log(text))
+        .catch((error) => console.error("Error!", error.message));
+});
+</script>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemeu.style.right = "0";
+    }
+    function closemenu() {
+        sidemeu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
